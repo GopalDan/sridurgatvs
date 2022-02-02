@@ -112,15 +112,15 @@ function Navbar() {
 const Wrapper = styled.header`
   .fade-in {
     height: 4px;
-    width: 1px;
+    width: 0%;
     background: red;
+    margin: auto;
     opacity: 0;
     transition: all 0.5s ease;
   }
   .fade-in-show {
-    opacity: 1;
-    /* height: 150px; */
-    width: 60px;
+    /* opacity: 1; */
+    width: 80%;
   }
   .top-item {
     min-height: 4rem;
@@ -168,8 +168,8 @@ const Wrapper = styled.header`
   .main-nav li a {
     /* display: block; */
     color: black;
-    text-decoration: none;
-    /* padding: 0.5rem; */
+    /* text-decoration: none; */
+    /* padding: 0.2rem 0; */
     /* margin: 0 10px; */
 
     /* margin-bottom: 0.5rem; */
@@ -193,6 +193,7 @@ const Wrapper = styled.header`
   }
   .main-nav li a:after {
     position: absolute;
+    /* top: 0; */
     bottom: 0;
     left: 0;
     right: 0;
@@ -200,11 +201,11 @@ const Wrapper = styled.header`
     width: 0%;
     content: ".";
     color: transparent;
-    background: #aaa;
+    background: var(--theme-color-accent-1);
     height: 4px;
   }
   .main-nav li a:hover:after {
-    width: 70%;
+    /* width: 80%; */
   }
   /* ------- END OF ANIMATION -------- */
   .selected-link {
