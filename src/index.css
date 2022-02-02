@@ -118,3 +118,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* <===========================  Laptop  ===================> */
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* <===========================  Tablet  ===================> */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* <===========================  Phone  ===================> */
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+}

@@ -15,7 +15,7 @@ function Bike({ bikes }) {
                     <span className="bike-price">{bike.price}</span> onwards
                   </div>
                 </div>
-                <p>{bike.description}</p>
+                <p className="bike-description">{bike.description}</p>
               </div>
             </article>
           );
@@ -57,7 +57,7 @@ const Wrapper = styled.div`
     /* border: 1px solid red; */
   }
   .bike-info h3 {
-    font-size: 26px;
+    font-size: 1.6rem;
   }
   .hr-lay {
     display: flex;
@@ -65,9 +65,35 @@ const Wrapper = styled.div`
   }
   .bike-price {
     /* display: inline; */
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
     color: red;
+  }
+
+  .bike-description {
+    font-size: 1rem;
+  }
+  /* <===========================  Tablet  ===================> */
+  @media screen and (min-width: 577px) and (max-width: 768px) {
+    .bike-info h3 {
+      font-size: 1.4rem;
+    }
+  }
+
+  /* <===========================  Phone  ===================> */
+  @media screen and (max-width: 576px) {
+    .bikes {
+      grid-template-columns: 1fr;
+    }
+    .bike-info h3 {
+      font-size: 1.4rem;
+    }
+    .bike-description {
+      font-size: 0.9rem;
+    }
+    .bike-price {
+      font-size: 1.12rem;
+    }
   }
 `;
 

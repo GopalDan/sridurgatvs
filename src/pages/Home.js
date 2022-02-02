@@ -57,33 +57,6 @@ function Home() {
       return !oldValue;
     });
   }
-  // useEffect(() => {
-  //   try {
-  //     setInterval(() => {
-  //       setCurrentIndex((oldValue) => {
-  //         var index = oldValue;
-  //         console.log("Old value: " + index);
-
-  //         if (index === bannerImages.length - 1) {
-  //           index = 0;
-  //         } else {
-  //           index = index + 1;
-  //         }
-  //         console.log("new value: " + index);
-
-  //         setCurrentIndex(index);
-  //       });
-  //     }, 3000);
-  //   } catch (error) {
-  //     console.log("Error: " + error);
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   for (let i = 0; i < 4; i++) {
-  //     sortedBikes.push(allBikes[i]);
-  //   }
-  // }, []);
 
   return (
     //https://medium.com/how-to-react/create-beautiful-image-sliders-carousels-in-react-using-react-alice-carousel-395d8ae9310c
@@ -191,7 +164,7 @@ const Wrapper = styled.header`
   .owners {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto 1fr;
+    /* grid-template-rows: auto 1fr; */
     grid-gap: 20px 20px;
   }
   .owner {
@@ -259,6 +232,18 @@ const Wrapper = styled.header`
     color: var(--theme-color-1);
     background-color: white;
     border: 1px solid var(--theme-color-1);
+  }
+
+  /* <===========================  Phone  ===================> */
+  @media screen and (max-width: 576px) {
+    .owners {
+      grid-template-columns: 1fr;
+    }
+    .show-more {
+      padding: 0.8rem 1.5rem;
+      font-size: 18px;
+      /* transition: all 0.3s ease; */
+    }
   }
 `;
 

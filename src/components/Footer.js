@@ -107,6 +107,26 @@ const Wrapper = styled.footer`
   .footer-sitemap {
     display: flex;
   }
+
+  /* <===========================  Phone  ===================> */
+  @media screen and (max-width: 576px) {
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      padding: 3rem 0;
+    }
+    .footer-column {
+      margin-bottom: 0.5rem;
+    }
+    .footer-column h4 {
+      font-size: 1.12rem;
+      margin-bottom: 0rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
 `;
 
 export default Footer;
